@@ -45,6 +45,14 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'nokogiri', '~> 1.6.1'
 gem 'rails-i18n', '~> 4.0.1'
 
+group :development do
+  # エラー画面をわかりやすく整形してくれる
+  gem 'better_errors'
+
+  # better_errorsの画面上にirb/pry(PERL)を表示する
+  gem 'binding_of_caller'
+end
+
 group :test do
   gem 'rspec-rails', '~> 3.0.0.beta2'
   gem 'spring-commands-rspec', '~> 1.0.1'

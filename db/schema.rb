@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160525133920) do
+ActiveRecord::Schema.define(version: 20160707231823) do
+
+  create_table "administrators", force: true do |t|
+    t.string  "email",                           null: false
+    t.string  "email_for_index",                 null: false
+    t.string  "hashed_password"
+    t.boolean "suspended",       default: false, null: false
+  end
+
+  add_index "administrators", ["email_for_index"], name: "index_administrators_on_email_for_index", unique: true, using: :btree
 
   create_table "staff_members", force: true do |t|
     t.string   "email",                            null: false
