@@ -44,13 +44,16 @@ gem 'therubyracer', platforms: :ruby
 gem 'bcrypt', '~> 3.1.7'
 gem 'nokogiri', '~> 1.6.1'
 gem 'rails-i18n', '~> 4.0.1'
+gem 'foreigner', '~> 1.6.1'
+gem 'kaminari', '~> 0.15.1'
+gem 'date_validator', '~> 0.7.0'
+gem 'email_validator', '~> 1.4.0'
 
 group :development do
-  # エラー画面をわかりやすく整形してくれる
   gem 'better_errors'
-
-  # better_errorsの画面上にirb/pry(PERL)を表示する
   gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'quiet_assets', '~> 1.0.2'
 end
 
 group :test do
