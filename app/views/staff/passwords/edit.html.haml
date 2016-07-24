@@ -1,7 +1,7 @@
 - @title = 'パスワード変更'
 %h1= @title
 
-.generic-form
+#generic-form
   = form_for @change_password_form, url: staff_password_path, method: :patch do |f|
     - p = FormPresenter.new(f, self)
     = p.password_field_block(:current_password, '現在のパスワード', size: 32, required: true)

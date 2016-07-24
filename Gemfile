@@ -48,11 +48,12 @@ gem 'foreigner', '~> 1.6.1'
 gem 'kaminari', '~> 0.15.1'
 gem 'date_validator', '~> 0.7.0'
 gem 'email_validator', '~> 1.4.0'
+gem 'jquery-ui-rails', '~> 4.2.1'
+gem 'pry-rails'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry-rails'
   gem 'quiet_assets', '~> 1.0.2'
 end
 

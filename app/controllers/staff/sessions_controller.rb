@@ -22,7 +22,7 @@ class Staff::SessionsController < Staff::Base
       flash.notice = 'ログインしました。'
       redirect_to :staff_root
     else
-      if staff_member.suspended?
+      if staff_member.try(:suspended?)
         staff_member.events.create!(type: 'rejected')
         flash.now.alert = 'アカウントが停止されています。'
       else
