@@ -1,9 +1,11 @@
-- @title = '顧客情報'
+- @title = '顧客管理'
 %h1= @title
 
 .table-wrapper
   .links
     = link_to '新規登録', :new_staff_customer
+
+  = render 'search_form'
 
   = paginate @customers
 

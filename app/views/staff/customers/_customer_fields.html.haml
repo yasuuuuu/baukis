@@ -7,3 +7,8 @@
   = p.full_name_block(:family_name_kana, :given_name_kana, 'フリガナ', required: true)
   = p. birthday_field_block(:birthday, '生年月日')
   = p.gender_field_block
+  .input-block
+    = p.decorated_label(:personal_phones, '電話番号')
+    %ol
+      - p.object.personal_phones.each_with_index do |phone, index|
+        = render 'phone_fields', f: ff, phone: phone, index: index
